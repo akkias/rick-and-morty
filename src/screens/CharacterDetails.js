@@ -19,11 +19,11 @@ const CharacterDetails = () => {
     .results.find((details) => details.name === character.location.name);
 
   useEffect(() => {
-    async function fetchData() {
+    async function getData() {
       const episodes = await getEpisodes(character.episode);
       setEpisodes(episodes);
     }
-    fetchData();
+    getData();
   }, [character.episode]);
 
   return (
