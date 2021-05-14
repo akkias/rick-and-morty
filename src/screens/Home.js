@@ -2,14 +2,14 @@ import React from "react";
 import { useQuery } from "react-query";
 import Character from "../components/Character";
 import Loader from "../assets/images/loader.svg";
-import { fetchData } from "../services";
+import { getData } from "../services";
 import ErrorBoundry from "../components/ErrorBoundry";
 
 const Characters = () => {
   const { data, isLoading, isError } = useQuery("characters", () =>
-    fetchData("character")
+    getData("character")
   );
-  const locations = useQuery("locations", () => fetchData("location"));
+  const locations = useQuery("locations", () => getData("location"));
 
   if (isError) return <h1 className="app-error">Error loading the content</h1>;
   return (
