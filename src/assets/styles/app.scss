@@ -1,0 +1,68 @@
+@import "./include-media";
+@import "./layout";
+@import "./variables";
+@import "./character";
+@import "./character-details";
+* {
+  box-sizing: border-box;
+}
+body {
+  background: $gray90;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  text-decoration: none;
+}
+.app {
+  &-header {
+    background: $gray90;
+  }
+  &-error {
+    background: rgba($white, 0.2);
+    color: $white;
+    margin: 10vh auto 0;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 20vw;
+    left: calc(50% - 200px);
+    width: 400px;
+    font-size: 1rem;
+  }
+  &-loader {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 40px);
+    z-index: 1;
+    @media only screen and (max-width: 992px) {
+      transform: translate(-60px, 25px);
+      left: 100%;
+    }
+    &Image {
+      display: block;
+      width: 40px;
+    }
+  }
+}
+.badge {
+  background-color: $white;
+  display: inline-block;
+  color: $black;
+  font-size: 0.75rem;
+  padding: 3px 6px;
+  border-radius: 1rem;
+  align-self: auto;
+  line-height: 1;
+  box-shadow: $shadow-small;
+  + .badge {
+    margin-left: 0.5rem;
+  }
+}

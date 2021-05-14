@@ -1,0 +1,13 @@
+.container {
+  margin: auto;
+  padding: 1.5rem;
+  @include media("<=640px") {
+    max-width: 640px;
+  }
+  @include media(">=640px", "<=tablet") {
+    max-width: 768px;
+  }
+  @include media(">=tablet") {
+    max-width: 1140px;
+  }
+}
