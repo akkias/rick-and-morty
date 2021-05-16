@@ -9,12 +9,11 @@ const Characters = () => {
   const { data, isLoading, isError } = useQuery("characters", () =>
     getData("character")
   );
-  const locations = useQuery("locations", () => getData("location"));
 
   if (isError) return <h1 className="app-error">Error loading the content</h1>;
   return (
     <div className="container">
-      {isLoading && locations.isLoading ? (
+      {isLoading ? (
         <div className="app-loader">
           <img src={Loader} alt="Loading" className="app-loaderImage" />
         </div>
