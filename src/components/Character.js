@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import slug from "slug";
 import Badge from "./Badge";
+import { slugify } from "../utils/index";
 
 const Character = ({ character }) => {
   return (
     <article className="character">
-      <Link to={`character/${slug(character.name)}-${character.id}`}>
+      <Link to={`character/${slugify(character.name)}-${character.id}`}>
         <figure className="character-imageWrapper">
           <div className="character-coverImage">
             <img
