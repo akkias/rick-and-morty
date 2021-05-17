@@ -28,7 +28,3 @@ The application is deployed to the Vercel and can be viewed at [Rick and Morty](
   - screens
   
 Used [react-query](https://react-query.tanstack.com/overview) for the state management
-
-#### To be improved
-- Fetch data on the details page when the cache is not present.
-- Remove slug package and write plain JS to create URL slug.
